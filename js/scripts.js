@@ -70,18 +70,17 @@
     }
 
     // The inline <head> script already applied any stored theme pre-paint.
-    // Only job left here: first visit with nothing stored follows the OS.
+    //
+    // First visit is ALWAYS light, deliberately — the light paper theme is the
+    // designed one and everybody should meet it first, whatever their OS is set
+    // to. So we don't read prefers-color-scheme and we don't follow OS changes.
+    // A returning visitor's own choice still wins, via the stored value.
+    //
+    // NB: the theme names are historical. TWILIGHT is the LIGHT (paper) theme
+    // and GOLDEN is the dark one.
     (function initTheme() {
         if (readStoredTheme()) return;
-        // NB: the theme names are historical. TWILIGHT is now the LIGHT
-        // (paper) default and GOLDEN is the dark palette, so this keys off
-        // prefers-color-scheme: dark.
-        var dark = mq("(prefers-color-scheme: dark)");
-        if (dark && dark.matches) applyTheme(GOLDEN, false);
-        // Keep following the OS until the visitor makes an explicit choice.
-        onMQ(dark, function (e) {
-            if (!readStoredTheme()) applyTheme(e.matches ? GOLDEN : TWILIGHT, false);
-        });
+        applyTheme(TWILIGHT, false);
     })();
 
     var themeToggle = $("#themeToggle");
