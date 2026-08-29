@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Scratch / preview artifacts (this site has no build step — nothing generated
+# should ever be committed)
+__*.html
+*.log
+node_modules/

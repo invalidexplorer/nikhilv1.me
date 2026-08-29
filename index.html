@@ -1,348 +1,819 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="twilight">
     <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
+
+        <title>Nikhil Verma — Software Engineer, AWS</title>
+        <meta
+            name="description"
+            content="Nikhil Verma is a software development engineer at AWS in Santa Clara. He ships features in AWS License Manager User Subscriptions and builds multi-agent tooling on Amazon Bedrock. MS Computer Science, UC Irvine."
+        />
+        <meta name="author" content="Nikhil Verma" />
+        <link rel="canonical" href="https://nikhil-verma.me/" />
+
+        <!-- Open Graph / social -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nikhil-verma.me/" />
+        <meta property="og:title" content="Nikhil Verma — Software Engineer, AWS" />
+        <meta
+            property="og:description"
+            content="Distributed systems and multi-agent AI on AWS License Manager User Subscriptions. Features in three AWS launches, one invention disclosure filed, and strong opinions about spacing."
+        />
+        <meta property="og:image" content="https://nikhil-verma.me/assets/img/profile.JPG" />
+        <meta name="twitter:card" content="summary" />
+
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..700;1,300..600&family=Instrument+Sans:wght@400..600&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Icons -->
+        <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js" crossorigin="anonymous"></script>
+
+        <link href="css/styles.css" rel="stylesheet" />
+
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-26PRPJH95H"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-26PRPJH95H');
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-26PRPJH95H");
         </script>
 
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Nikhil Verma</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-bg fixed-top" id="sideNav">
-            <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.JPG" alt="..." /></span>
-                <span class="d-block d-lg-none">Nikhil Verma</span>
-            </a> -->
+        <!-- Set theme before paint to avoid a flash -->
+        <script>
+            (function () {
+                try {
+                    var saved = localStorage.getItem("theme");
+                    if (saved) document.documentElement.dataset.theme = saved;
+                } catch (e) {}
+            })();
+        </script>
 
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-inline-block align-middle">
-                    <img class="img-fluid img-profile rounded-circle mr-2 d-lg-none" src="assets/img/profile.JPG" alt="..." style="width: 2rem; height: 2rem;" />
-                    <span class="d-inline-block d-lg-none">Nikhil Verma</span>
-                    <img class="img-fluid img-profile rounded-circle mr-2 d-none d-lg-inline-block" src="assets/img/profile.JPG" alt="..." />
-                </span>
-            </a>
-                                                
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Achievements</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://drive.google.com/file/d/1pyNb5nNL6TZ08U1xKx_8jOc23r4QAqiT/view?usp=sharing" target="_blank"><i class="fa fa-download"></i> Resume</a></li>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Nikhil Verma",
+                "url": "https://nikhil-verma.me/",
+                "image": "https://nikhil-verma.me/assets/img/profile.JPG",
+                "jobTitle": "Software Development Engineer",
+                "worksFor": { "@type": "Organization", "name": "Amazon Web Services" },
+                "address": { "@type": "PostalAddress", "addressLocality": "Santa Clara", "addressRegion": "CA", "addressCountry": "US" },
+                "email": "mailto:nikhilv1@uci.edu",
+                "alumniOf": [
+                    { "@type": "CollegeOrUniversity", "name": "University of California, Irvine" },
+                    { "@type": "CollegeOrUniversity", "name": "Thapar Institute of Engineering & Technology" }
+                ],
+                "knowsAbout": ["Distributed Systems", "AWS", "Java", "Python", "Multi-Agent AI", "Amazon Bedrock", "Software Licensing"],
+                "sameAs": [
+                    "https://www.linkedin.com/in/nikhilvermauci/",
+                    "https://github.com/invalidexplorer",
+                    "https://medium.com/@nikhilis1700",
+                    "https://dribbble.com/InvalidExplorer/"
+                ]
+            }
+        </script>
+    </head>
+
+    <body id="top">
+        <div id="progress" aria-hidden="true"></div>
+
+        <a class="sr-only" href="#main">Skip to content</a>
+
+        <!-- ============ NAV ============ -->
+        <nav class="nav" id="nav">
+            <div class="wrap">
+                <a class="brand" href="#top" aria-label="Back to top">
+                    <img src="assets/img/profile.JPG" alt="" />
+                    <span>Nikhil<span class="dot">.</span></span>
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+
+                <a class="nav-cta" href="assets/NikhilVerma-Resume.pdf" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Résumé
+                </a>
+
+                <button class="toggle" id="themeToggle" aria-label="Invert the color scheme" title="Invert">
+                    <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+                    </svg>
+                    <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4.2" />
+                        <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4" />
+                    </svg>
+                </button>
+
+                <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <pre>Hi, My name is</pre>
-                    <h1 class="mb-0">
-                        Nikhil
-                        <span class="text-primary">&nbsp;Verma</span>
-                    </h1>
-                    <p class="lead mt-5 mb-3">I<span class="typed" data-typed-items="'m an experienced <b>Developer</b> ..., <b> code</b> &amp;lt;/&amp;gt; ,  <b> design</b>"></span></p>
-                    <p class="text-primary lead mb-3"> Masters of Computer Science <b>@</b> University of California, Irvine</p>
-                    <p class="mb-5">
-                        
-                        Driven by a passion for design and development, I spearheaded automation at Amadeus using GO, Python, and React, streamlining processes. My HCI research and proficiency in Adobe XD highlight my focus on user-centric solutions. I'm eager to bring this blend of tech expertise and design insight to roles that champion innovation and efficiency.                    <div class="social-icons">
-                            <div class="social-icons">
-                                <a class="social-icon" href="https://www.linkedin.com/in/nikhilvermauci/" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
-                                <a class="social-icon" href="https://github.com/invalidexplorer/" target="_blank" ><i class="fab fa-github"></i></a>
-                                <a class="social-icon" href="https://dribbble.com/InvalidExplorer/" target="_blank" ><i class="fab fa-dribbble"></i></a>
-                                <a class="social-icon" href="https://medium.com/@nikhilis1700" target="_blank" ><i class="fab fa-medium"></i></a>
+
+        <main id="main">
+            <!-- ============ HERO ============ -->
+            <header class="hero">
+                
+                <div class="wrap hero-inner">
+                    <p class="mono hi"><span class="wave">👋</span> Hi, I'm</p>
+                    <h1 class="h-xl">Nikhil <span class="grad-text">Verma</span></h1>
+
+                    <p class="rotator" aria-live="off">
+                        <span class="lead-in">$ </span><span id="rotate"></span><span class="caret" aria-hidden="true"></span>
+                    </p>
+
+                    <p class="hero-bio">
+                        Software engineer on <strong>AWS License Manager</strong>. I ship features in User Subscriptions, the part of it that puts
+                        license-included Microsoft software on EC2: Java on Lambda, Step Functions and DynamoDB, across 34 regions. Lately,
+                        multi-agent tooling on Bedrock, so ticket triage stops landing on people.
+                    </p>
+
+                    <div class="chips">
+                        <span class="chip"><span class="pulse" aria-hidden="true"></span> SDE @ Amazon Web Services</span>
+                        <span class="chip"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Santa Clara, California</span>
+                        <span class="chip"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> MS CS, UC Irvine</span>
+                        <span class="chip"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Patent IDF filed · primary inventor</span>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-sun" href="assets/NikhilVerma-Resume.pdf" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Résumé
+                        </a>
+                        <a class="btn btn-ghost" href="#contact"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Say hello</a>
+
+                        <div class="socials">
+                            <a href="https://www.linkedin.com/in/nikhilvermauci/" target="_blank" rel="noopener" aria-label="LinkedIn"
+                                ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+                            ></a>
+                            <a href="https://github.com/invalidexplorer/" target="_blank" rel="noopener" aria-label="GitHub"
+                                ><i class="fa-brands fa-github" aria-hidden="true"></i
+                            ></a>
+                            <a href="https://medium.com/@nikhilis1700" target="_blank" rel="noopener" aria-label="Medium"
+                                ><i class="fa-brands fa-medium" aria-hidden="true"></i
+                            ></a>
+                            <a href="https://dribbble.com/InvalidExplorer/" target="_blank" rel="noopener" aria-label="Dribbble"
+                                ><i class="fa-brands fa-dribbble" aria-hidden="true"></i
+                            ></a>
+                        </div>
+                    </div>
+
+                    <p class="mono scroll-hint"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> everything below is checkable</p>
+                </div>
+            </header>
+
+            <!-- ============ ABOUT + STATS ============ -->
+            <section id="about">
+                <div class="wrap">
+                    <div class="sec-head reveal">
+                        <p class="mono eyebrow">01 · the premise</p>
+                        <h2>I ship the backend<br />and <span class="grad-text">argue about the spacing.</span></h2>
+                        <p class="sec-sub">
+                            Manual work is a bug. I have been proving that since Amadeus: automation tooling there, HCI research at UC Irvine,
+                            licensing infrastructure at AWS now. The instinct does not change. Find the expensive manual thing, delete it, go
+                            find the next one.
+                        </p>
+                    </div>
+
+                    <div class="stats reveal" id="stats">
+                        <div class="stat"><b data-count="3">3</b><span>AWS launches I shipped features into</span></div>
+                        <div class="stat"><b data-count="206">206</b><span>prod accounts onboarded to agentic ops, 34 regions</span></div>
+                        <div class="stat"><b data-count="800" data-prefix="~">~800</b><span>support tickets auto-triaged / month</span></div>
+                        <div class="stat"><b data-count="50" data-suffix="%">50%</b><span>less customer compute cost than one product per instance</span></div>
+                        <div class="stat"><b data-count="100" data-suffix="+">100+</b><span>manual hours / month saved by my legal-doc pipeline</span></div>
+                        <div class="stat"><b data-count="1">1</b><span>invention disclosure (IDF) filed, primary inventor</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="rule" />
+
+            <!-- ============ EXPERIENCE ============ -->
+            <section id="experience">
+                <div class="wrap">
+                    <div class="sec-head reveal">
+                        <p class="mono eyebrow">02 · where the hours went</p>
+                        <h2>Jobs, newest <span class="grad-text">first.</span></h2>
+                    </div>
+
+                    <div class="timeline">
+                        <!-- AWS SDE -->
+                        <article class="card job now reveal">
+                            <div class="job-top">
+                                <h3>Software Development Engineer <span class="at">· Amazon Web Services</span></h3>
+                                <span class="when">Feb 2025 – present</span>
                             </div>
-                                            <div class="subheading mt-3 mb-5">
-                        +1-9496782129 ·
-                        <a href="mailto:nikhilv1@uci.edu">nikhilv1@uci.edu</a>
-                    </div>
-                    <div class="subheading">
-                        <a href="https://drive.google.com/file/d/1pyNb5nNL6TZ08U1xKx_8jOc23r4QAqiT/view?usp=sharing" download>
-                            <button type="button" class="btn btn-secondary text-light"><i class="fa fa-arrow-up-right-from-square"></i> Resume</button>
-                          </a>                          
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-python"></i> Python</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Flask</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>OpenApi</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>C++</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>RestAPI</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Angular</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>React</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Openshift</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>MongoDB</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Go</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>TypeScript</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Airflow</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Jenkins</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fa fa-database"></i> MySQL</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-html5"></i> HTML</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-css3-alt"></i> CSS</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-bootstrap"></i> Bootstrap</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-js-square"></i> Javascript</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-docker"></i> Docker</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Kubernetes</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-github"></i> Github</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-bitbucket"></i> Bitbucket</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-jira"></i> Jira</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class="fab fa-confluence"></i> Confluence</li></span>
-                        <!-- <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-mysql"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-npm"></i></li> -->
-                    </ul>
-                    <div class="subheading mb-3">UX UI</div>
-                    <ul class="list-inline dev-icons">
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Figma</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Adobe XD</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Prototyping</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>UI Design</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Communication</li></span>
-                        <span class="badge rounded-pill bg-light text-dark"><li class="list-inline-item"><i class=""></i>Responsive Design</li></span>
-                    </ul>
-                    <div class="subheading mb-3 mt-5">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            System Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Data Structures & Algorithms
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Web Development
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Automation & IoT
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            HCI Research driven solutions
-                        </li>
-    
-                    </ul>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Developer - I</h3>
-                            <div class="subheading mb-3">Amadeus Labs - Bengaluru, India</div>
-                            <div class="d-md-none"><span class="text-primary">August 2021 - August 2023</span></div>
-                            <p><ul id="amadeus-sde-1-experience" class="experience-list">
-                                <li>Spearheaded the development and maintenance of automation tools in GO, Python, and React,
-                                    enhancing team productivity and setting new performance KPIs</li>
-                                <li>Achieved a 35% reduction in the team's investigation time of Incident reports.</li>
-                                <li>Conducted HCI research, led user interviews, and crafted Adobe XD application designs.</li>
-                            </ul></p>
-                        </div>
-                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">August 2021 - August 2023</span></div>
-                    </div>
-                    <h2 class="mb-5">Internships</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Developer Intern</h3>
-                            <div class="subheading mb-3">Amadeus Labs - Bengaluru, India</div>
-                            <div class="d-md-none"><span class="text-primary">January 2021 - May 2021</span></div>
-                            <p><ul id="amadeus-sde-intern-experience" class="experience-list">
-                                <li>Developed an Angular web app, streamlining localization data edits and reducing workload
-                                    significantly.</li>
-                                <li>Reduced the workload from 2 hours/ 20 keys to 5 mins/ n keys</li>
-                            </ul></p>
-                        </div>
-                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">January 2021 - May 2021</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Product Designer Intern</h3>
-                            <div class="subheading mb-3">F22 LABS - Chennai, India</div>
-                            <div class="d-md-none"><span class="text-primary">September 2020 - October 2020</span></div>
-                            <p><ul id="summer-intern-eced-experience" class="experience-list">
-                                <li>Created over four mobile application experiences on Figma for clients; all of them were later developed
-                                    into actual mobile application.</li>
-                            </ul></p>
-                        </div>
-                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">September 2020 - October 2020</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Quantum Computing Intern</h3>
-                            <div class="subheading mb-3">AGH INSTITUTE OF SCIENCE AND TECHNOLOGY - Kraków, Poland</div>
-                            <div class="d-md-none"><span class="text-primary">June 2019 - July 2019</span></div>
-                            <p><ul id="summer-intern-quantum" class="experience-list">
+                            <p class="where">AWS License Manager · Santa Clara, CA</p>
+                            <ul class="bullets">
                                 <li>
-                                    <a href="https://github.com/invalidexplorer/Quantum_Prisoners_Dilemma">Implemented</a>
-                                     Quantum Game Theory using EWL scheme on Quantum Internet Simulator (Simulaqron,
-                                    Python), making cooperation the optimal strategy</li>
-                            </ul></p>
+                                    <strong>Multi-product instance support.</strong> Sole low-level-design author, and 40+ changes across Java
+                                    Lambda service logic, DynamoDB persistence and EC2 Image Builder AMI pipelines. Office and Visual Studio
+                                    now coexist on one EC2 instance, <strong>halving customer compute cost</strong> against the prior
+                                    one-product-per-instance model.
+                                </li>
+                                <li>
+                                    <strong>Cross-account subscription workflow.</strong> Designed and implemented it in Java: modeled the
+                                    CrossAccountRelationship entity, migrated a standalone DynamoDB table into a GSI, and shipped sync and
+                                    async authorization across Lambda, Step Functions and DynamoDB. It takes <strong>$10 per user per
+                                    month</strong> off customer bills, and is what Shared Active Directory support runs on.
+                                </li>
+                                <li>
+                                    <strong>Product-key leak, caught pre-launch.</strong> Led a security analysis of Visual Studio build
+                                    components showing that a static, non-rotatable product key could be captured on-host via Windows Event
+                                    ID 4688. A key you cannot rotate is a credential you can never take back.
+                                    <strong>Four delivery designs rejected</strong>, one fleet-wide product-key leak prevented.
+                                </li>
+                                <li>
+                                    <strong>Agentic-ops onboarding.</strong> Brought all of User Subscriptions, 206 production accounts across
+                                    34 regions, onto the AWS DevOps agentic-ops platform via CDK, wiring Ticketing, Medic, Rome, MWS and
+                                    Timber into 16 pipelines.
+                                </li>
+                                <li>
+                                    <strong>Ticket Genie.</strong> A Python multi-agent tool on Amazon Bedrock and Claude that classifies and
+                                    triages roughly 800 tickets a month through Lambda and Step Functions. It took over the manual triage
+                                    rotation and cut time to resolution.
+                                </li>
+                                <li>
+                                    <strong>Windows Server 2025 and Global Licensing Insights.</strong> Extended the Java backend services and
+                                    REST APIs to add Windows Server 2025 support, one of five engineers credited on that launch. Built the
+                                    backend behind <strong>Global Licensing Insights</strong>, which shipped at re:Invent, and integrated
+                                    License Manager data with Tagris for tag-based reporting. Wrote the CloudWatch metrics, alarms, dashboards
+                                    and canaries that got it through operational readiness review.
+                                </li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Java</span><span class="tag">Distributed Systems</span><span class="tag">Lambda</span
+                                ><span class="tag">Step Functions</span><span class="tag">DynamoDB</span><span class="tag">EC2 Image Builder</span
+                                ><span class="tag">CDK</span><span class="tag">Bedrock</span><span class="tag">CloudWatch</span>
+                            </div>
+                        </article>
+
+                        <!-- AWS Intern -->
+                        <article class="card job reveal">
+                            <div class="job-top">
+                                <h3>AI Engineer Intern <span class="at">· Amazon Web Services</span></h3>
+                                <span class="when">Jun – Sep 2024</span>
+                            </div>
+                            <p class="where">Santa Clara, CA</p>
+                            <ul class="bullets">
+                                <li>
+                                    <strong>Legal documents to licensing statements.</strong> Built a multi-agent, dynamic code-generation
+                                    pipeline that turns dense contract language into machine-readable licensing statements, saving
+                                    <strong>100+ manual hours a month</strong>.
+                                </li>
+                                <li>
+                                    <strong>Stack.</strong> LangGraph, LangChain and ReAct agents over ChromaDB and OpenSearch vector stores
+                                    on AWS Bedrock, orchestrated through internal agent-tool servers I built from scratch, because
+                                    <strong>MCP had not shipped yet</strong>.
+                                </li>
+                                <li>
+                                    <strong>Retrieval.</strong> Designed the semantic chunking and similarity-search workflow, which reached
+                                    <strong>83% exact-statement accuracy in internal tests</strong>. Not a public benchmark: our documents, our test set.
+                                </li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">ReAct</span
+                                ><span class="tag">Bedrock</span><span class="tag">ChromaDB</span><span class="tag">OpenSearch</span
+                                ><span class="tag">Agentic RAG</span>
+                            </div>
+                        </article>
+
+                        <!-- UCI -->
+                        <article class="card job reveal">
+                            <div class="job-top">
+                                <h3>Graduate Student Research Assistant <span class="at">· UC Irvine, Dept. of Informatics</span></h3>
+                                <span class="when">Jan – Dec 2024</span>
+                            </div>
+                            <p class="where">NSF-funded, under Dr. Anne Marie Piper · Irvine, CA</p>
+                            <ul class="bullets">
+                                <li>
+                                    <strong>Accessible ChatGPT.</strong> Built and benchmarked a multimodal-LLM interface (Next.js, MongoDB,
+                                    Auth0, OpenAI APIs) that makes slide presentations readable for blind users. NSF-funded, in
+                                    Dr. Anne Marie Piper's lab. She ran the lab, I built the interface and ran the evaluation.
+                                </li>
+                                <li>
+                                    <strong>Slack accessibility module.</strong> An object-oriented Python abstraction over Slack's API. By our
+                                    study's own measures, a <strong>75% improvement</strong> in workplace-communication accessibility for
+                                    visually impaired users.
+                                </li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Next.js</span><span class="tag">Python</span><span class="tag">MongoDB</span
+                                ><span class="tag">OpenAI API</span><span class="tag">HCI</span><span class="tag">a11y</span>
+                            </div>
+                        </article>
+
+                        <!-- Amadeus -->
+                        <article class="card job reveal">
+                            <div class="job-top">
+                                <h3>Full Stack Developer I <span class="at">· Amadeus Software Labs</span></h3>
+                                <span class="when">Aug 2021 – Aug 2023</span>
+                            </div>
+                            <p class="where">Bangalore, India</p>
+                            <ul class="bullets">
+                                <li>
+                                    Owned an in-house data-driven automation product end to end (Golang, Python, React) — saved
+                                    <strong>3 hours of manual work a day</strong>, cut processing time ~70%, and fully automated bug-reporting
+                                    workflows.
+                                </li>
+                                <li>
+                                    Cut the team's incident-investigation time <strong>35%</strong> with a Python + Golang web app deployed on
+                                    Azure via Kubernetes and OpenShift.
+                                </li>
+                                <li>
+                                    <strong>Ticket-to-code analysis.</strong> Analyzed ServiceNow change and incident tickets against
+                                    commercial C++ code, driving a <strong>15% drop in SLA breaches</strong>. Unifying the data repositories
+                                    behind it cut developer effort another 30%.
+                                </li>
+                                <li>
+                                    Ran the HCI side too: user interviews, Adobe XD mockups, user testing and stakeholder reviews — designer
+                                    and frontend engineer in the same sprint.
+                                </li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Golang</span><span class="tag">Python</span><span class="tag">React</span
+                                ><span class="tag">C++</span><span class="tag">Kubernetes</span><span class="tag">OpenShift</span
+                                ><span class="tag">Azure</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- earlier -->
+                    <details class="details reveal">
+                        <summary>
+                            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Before that. Three internships, one of them in
+                            Kraków
+                        </summary>
+                        <div class="mini">
+                            <div class="mini-row">
+                                <h4>Software Engineer Intern · Amadeus India <span class="when">Jan – May 2021</span></h4>
+                                <p>
+                                    Built an Angular web app for localization data edits. Took a task from 2 hours per 20 keys to 5 minutes
+                                    for any number of keys.
+                                </p>
+                            </div>
+                            <div class="mini-row">
+                                <h4>Product Design Intern · F22 Labs <span class="when">Sep – Oct 2020</span></h4>
+                                <p>Designed four mobile app experiences in Figma for clients. All four were built and shipped.</p>
+                            </div>
+                            <div class="mini-row">
+                                <h4>Quantum Computing Intern · AGH University, Kraków <span class="when">Jun – Jul 2019</span></h4>
+                                <p>
+                                    Implemented quantum game theory with the EWL scheme on a quantum internet simulator (SimulaQron, Python),
+                                    making cooperation the optimal strategy in the Prisoner's Dilemma.
+                                    <a href="https://github.com/invalidexplorer/Quantum_Prisoners_Dilemma" target="_blank" rel="noopener"
+                                        >Code <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a
+                                    >
+                                </p>
+                            </div>
                         </div>
-                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">June 2019 - July 2019</span></div>
+                    </details>
+                </div>
+            </section>
+
+            <hr class="rule" />
+
+            <!-- ============ SKILLS ============ -->
+            <section id="skills">
+                <div class="wrap">
+                    <div class="sec-head reveal">
+                        <p class="mono eyebrow">03 · toolkit</p>
+                        <h2>The working set.</h2>
+                        <p class="sec-sub">Roughly ordered by how much of my week each one owns.</p>
+                    </div>
+
+                    <div class="grid-skills">
+                        <div class="card reveal">
+                            <div class="skill-head">
+                                <span class="ico"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></span>
+                                <h3>Backend &amp; Systems</h3>
+                            </div>
+                            <div class="pills">
+                                <span class="pill">Distributed Systems</span><span class="pill">Microservices</span
+                                ><span class="pill">Event-Driven Architecture</span><span class="pill">REST APIs</span
+                                ><span class="pill">Low-Level Design</span><span class="pill">Observability</span>
+                            </div>
+                        </div>
+
+                        <div class="card reveal">
+                            <div class="skill-head">
+                                <span class="ico"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                                <h3>Languages &amp; Frameworks</h3>
+                            </div>
+                            <div class="pills">
+                                <span class="pill">Java</span><span class="pill">Python</span><span class="pill">Golang</span
+                                ><span class="pill">TypeScript</span><span class="pill">Spring Boot</span><span class="pill">Flask</span
+                                ><span class="pill">Django</span><span class="pill">React</span><span class="pill">Next.js</span>
+                            </div>
+                        </div>
+
+                        <div class="card reveal">
+                            <div class="skill-head">
+                                <span class="ico"><i class="fa-brands fa-aws" aria-hidden="true"></i></span>
+                                <h3>Cloud &amp; Infrastructure</h3>
+                            </div>
+                            <div class="pills">
+                                <span class="pill">Lambda</span><span class="pill">Step Functions</span><span class="pill">API Gateway</span
+                                ><span class="pill">EC2 &amp; Image Builder</span><span class="pill">S3</span><span class="pill">CDK</span
+                                ><span class="pill">CloudWatch</span><span class="pill">Docker</span><span class="pill">Kubernetes</span
+                                ><span class="pill">Terraform</span><span class="pill">CI/CD</span>
+                            </div>
+                        </div>
+
+                        <div class="card reveal">
+                            <div class="skill-head">
+                                <span class="ico"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+                                <h3>Data &amp; Storage</h3>
+                            </div>
+                            <div class="pills">
+                                <span class="pill">DynamoDB</span><span class="pill">PostgreSQL</span><span class="pill">MongoDB</span
+                                ><span class="pill">OpenSearch</span><span class="pill">ChromaDB</span>
+                            </div>
+                        </div>
+
+                        <div class="card reveal">
+                            <div class="skill-head">
+                                <span class="ico"><i class="fa-solid fa-robot" aria-hidden="true"></i></span>
+                                <h3>AI &amp; LLM Systems</h3>
+                            </div>
+                            <div class="pills">
+                                <span class="pill">Multi-Agent Systems</span><span class="pill">LangGraph</span><span class="pill">LangChain</span
+                                ><span class="pill">Strands</span><span class="pill">Bedrock AgentCore</span><span class="pill">MCP</span
+                                ><span class="pill">Agentic RAG</span><span class="pill">ReAct</span><span class="pill">LLM Evaluation</span
+                                ><span class="pill">Prompt Engineering</span>
+                            </div>
+                        </div>
+
+                        <div class="card reveal">
+                            <div class="skill-head">
+                                <span class="ico"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></span>
+                                <h3>Design &amp; Research</h3>
+                            </div>
+                            <div class="pills">
+                                <span class="pill">Figma</span><span class="pill">Adobe XD</span><span class="pill">Prototyping</span
+                                ><span class="pill">User Interviews</span><span class="pill">Accessibility</span
+                                ><span class="pill">Responsive Design</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
 
+            <hr class="rule" />
+
+            <!-- ============ WORK ============ -->
+            <section id="work">
+                <div class="wrap">
+                    <div class="sec-head reveal">
+                        <p class="mono eyebrow">04 · selected work</p>
+                        <h2>In <span class="grad-text">production, or in public.</span></h2>
+                        <p class="sec-sub">
+                            Three are live AWS features I shipped code into. Launches are team sport, so the credits and my part in each are
+                            spelled out. The rest I built because I wanted them to exist.
+                        </p>
+                    </div>
+
+                    <div class="grid-work">
+                        <a
+                            class="card work wide reveal"
+                            href="https://docs.aws.amazon.com/license-manager/latest/userguide/user-based-subscriptions-launch.html"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <p class="work-kind">AWS launch · 2026</p>
+                            <h3>Office builder components for EC2 Image Builder <span class="go"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></h3>
+                            <p>
+                                Customers used to pick from a fixed catalog of pre-built Office AMIs. Now they build their own. Office version,
+                                architecture, Windows Server base, all chosen inside their own Image Builder pipelines. It also broke an old
+                                constraint: Office <em>and</em> Visual Studio, fully pre-licensed, on one instance, which halves customer compute
+                                cost against the prior one-product-per-instance model. <strong>My part:</strong> sole
+                                low-level-design author, and 40+ changes across Java Lambda service logic, DynamoDB persistence and the Image
+                                Builder AMI pipelines. Two engineers credited on the launch.
+                            </p>
+                            <div class="tags"><span class="tag">Java</span><span class="tag">EC2 Image Builder</span><span class="tag">DynamoDB</span><span class="tag">LLD author</span></div>
+                        </a>
+
+                        <a
+                            class="card work reveal"
+                            href="https://docs.aws.amazon.com/license-manager/latest/userguide/user-based-subscriptions.html"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <p class="work-kind">AWS launch · 2025</p>
+                            <h3>Shared Active Directory support <span class="go"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></h3>
+                            <p>
+                                Centralize subscription management in one account, then launch Office and Visual Studio instances across an entire
+                                org. Six engineers were credited on the launch. <strong>My part:</strong> the cross-account authorization workflow
+                                underneath — from the CrossAccountRelationship data model, through a standalone-table-to-GSI migration, to the sync
+                                and async authorization paths on Lambda and Step Functions.
+                            </p>
+                            <div class="tags"><span class="tag">Step Functions</span><span class="tag">DynamoDB GSI</span><span class="tag">Cross-account</span></div>
+                        </a>
+
+                        <a
+                            class="card work reveal"
+                            href="https://docs.aws.amazon.com/license-manager/latest/userguide/user-based-subscriptions.html"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <p class="work-kind">AWS launch · 2025</p>
+                            <h3>Windows Server 2025 support <span class="go"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></h3>
+                            <p>
+                                License-included Visual Studio and Office on Windows Server 2025, selectable straight from the Marketplace launch
+                                flow, Remote Desktop Server logins included. A License Manager × Marketplace collaboration credited to five
+                                engineers. <strong>My part:</strong> extending the Java backend services and REST APIs to carry the new Windows
+                                Server version end to end.
+                            </p>
+                            <div class="tags"><span class="tag">Java</span><span class="tag">REST APIs</span><span class="tag">Marketplace</span></div>
+                        </a>
+
+                        <div class="card work wide reveal">
+                            <p class="work-kind">Internal tool · multi-agent</p>
+                            <h3>Ticket Genie</h3>
+                            <p>
+                                An internal multi-agent triage system on Amazon Bedrock and Claude that reads, classifies and routes roughly
+                                800 support tickets a month through Lambda and Step Functions. It replaced a manual triage rotation and cut time to
+                                resolution. My favorite kind of project: the sort that hands people their afternoons back.
+                            </p>
+                            <div class="tags"><span class="tag">Python</span><span class="tag">Bedrock</span><span class="tag">Claude</span><span class="tag">Step Functions</span><span class="tag">Lambda</span></div>
+                        </div>
+
+                        <div class="card work reveal">
+                            <p class="work-kind">Product · UC Irvine ICS Expo</p>
+                            <h3>ELI — "Explain it to me Like I am…"</h3>
+                            <p>
+                                A browser extension that rewrites any article at one of five comprehension levels in a single click, with a
+                                distraction-free focus mode built for ADHD readers. Premise: not understanding something should not feel like your
+                                fault. I built both sides, the branding and Figma work, then the extension internals and the Gemini Pro backend.
+                            </p>
+                            <div class="tags"><span class="tag">ES6</span><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">Vertex AI</span><span class="tag">Gemini Pro</span></div>
+                        </div>
+
+                        <a class="card work reveal" href="https://github.com/invalidexplorer/xtcCoin" target="_blank" rel="noopener">
+                            <p class="work-kind">Open source</p>
+                            <h3>XTC Coin <span class="go"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></h3>
+                            <p>
+                                A blockchain-style cryptocurrency backend, written test-first: ECC signatures, a ledger API, multi-peer sync over
+                                PubSub. The pytest suite caught more of my mistakes than I did.
+                            </p>
+                            <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PubSub</span><span class="tag">pytest</span></div>
+                        </a>
+
+                        <a
+                            class="card work reveal"
+                            href="https://medium.muz.li/uber-compass-an-ar-ux-ui-case-study-569dd2e9f650"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <p class="work-kind">Design · published</p>
+                            <h3>Uber Compass <span class="go"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></h3>
+                            <p>
+                                An AR concept for Uber pickups. The awkward "where are you?" phone call, designed away. Published in Muzli's design
+                                journal.
+                            </p>
+                            <div class="tags"><span class="tag">AR</span><span class="tag">UX Research</span><span class="tag">Figma</span></div>
+                        </a>
+
+                        <a
+                            class="card work reveal"
+                            href="https://github.com/invalidexplorer/buddy_gps_generator"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <p class="work-kind">Side project</p>
+                            <h3>GPS Report Generator <span class="go"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></h3>
+                            <p>
+                                Built for a cab startup: turns raw coordinate streams into a full route report using the Google Maps API.
+                            </p>
+                            <div class="tags"><span class="tag">JavaScript</span><span class="tag">Google Maps API</span></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="rule" />
+
+            <!-- ============ RESEARCH ============ -->
+            <section id="research">
+                <div class="wrap">
+                    <div class="sec-head reveal">
+                        <p class="mono eyebrow">05 · patents &amp; publications</p>
+                        <h2>Written down.</h2>
+                    </div>
+
+                    <div class="card reveal">
+                        <p class="badge-patent"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Patent · IDF filed · primary inventor</p>
+                        <h3 style="margin-top: 0.9rem">TABS — Token Accounting &amp; Budget System</h3>
+                        <p style="color: var(--ink-2); margin-top: 0.6rem">
+                            A proposal to extend License Manager so it can meter and enforce
+                                <strong style="color: var(--ink)">per-user token budgets for AI spend</strong> — the question every team asks right
+                                before it puts an agent in production. Filed as an invention disclosure, not a granted patent; the patent
+                                application is still in preparation, so the mechanism stays under Amazon confidentiality. There is a live
+                                end-to-end proof of concept behind it, because I do not trust an idea I have not run.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">FinOps for LLMs</span><span class="tag">Metering</span><span class="tag">Policy Enforcement</span
+                            ><span class="tag">Working POC</span>
+                        </div>
+                    </div>
+
+                    <div class="pubs">
+                        <div class="pub reveal">
+                            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                            <div>
+                                <h4>
+                                    <a href="https://ieeexplore.ieee.org/document/9807757" target="_blank" rel="noopener"
+                                        >Post Quantum Digital Signature Change in IOTA to Reduce Latency in Internet of Vehicles (IoV)
+                                        Environments <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.72em" aria-hidden="true"></i></a
+                                    >
+                                </h4>
+                                <p>
+                                    N. Verma, S. Kumari, P. Jain · IEEE ICIBT 2022 · doi:10.1109/ICIBT52874.2022.9807757 — swapped W-OTS for
+                                    Dilithium and made IOTA encryption 81% faster for vehicular networks.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pub reveal">
+                            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+                            <div>
+                                <h4>CITI Program — IRB Members, Social &amp; Behavioral Research</h4>
+                                <p>Certified Apr 2024 · required for the NSF-funded human-subjects research at UC Irvine.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="rule" />
+
+            <!-- ============ EDUCATION ============ -->
+            <section id="education">
+                <div class="wrap">
+                    <div class="sec-head reveal">
+                        <p class="mono eyebrow">06 · education</p>
+                        <h2>School.</h2>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="card reveal">
+                            <div class="job-top">
+                                <h3>University of California, Irvine</h3>
+                                <span class="when">Sep 2023 – Dec 2024</span>
+                            </div>
+                            <p class="where">MS, Computer Science · Irvine, CA</p>
+                            <p class="edu-gpa">GPA 3.91 / 4.00</p>
+                            <p class="edu-courses">
+                                Artificial Intelligence · Generative Models · Advanced Programming &amp; Problem Solving · Operating Systems
+                            </p>
+                        </div>
+
+                        <div class="card reveal">
+                            <div class="job-top">
+                                <h3>Thapar Institute of Engineering &amp; Technology</h3>
+                                <span class="when">2017 – 2021</span>
+                            </div>
+                            <p class="where">BE, Electronics &amp; Computer · Patiala, India</p>
+                            <p class="edu-gpa">CGPA 9.03 / 10 (≈ 3.68 / 4)</p>
+                            <p class="edu-courses">Data Structures &amp; Algorithms · Operating Systems · Cybersecurity · Cognitive Science</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="rule" />
+
+            <!-- ============ BEYOND ============ -->
+            <section id="beyond">
+                <div class="wrap">
+                    <div class="sec-head reveal">
+                        <p class="mono eyebrow">07 · for its own sake</p>
+                        <h2>Nobody asked me<br />to <span class="grad-text">do any of this.</span></h2>
+                    </div>
+
+                    <div class="grid-fun">
+                        <div class="card fun reveal">
+                            <span class="emoji">🌊</span>
+                            <h3>Raised ₹30,000 in six hours</h3>
+                            <p>
+                                Youth ambassador for The 5 Gyres Institute. Three weeks to pull off a charity art exhibition: a team of 8,
+                                14 artists, 30+ works. I ran the marketing, the finances and the quality control too.
+                            </p>
+                        </div>
+                        <div class="card fun reveal">
+                            <span class="emoji">🏆</span>
+                            <h3>Special mention, Trav-Tech Hackathon</h3>
+                            <p>
+                                Built a travel-search experience with lastminute.com, aimed at making people want to <em>go</em> somewhere
+                                instead of comparing prices. Figma, then Figma again, then React.
+                            </p>
+                        </div>
+                        <div class="card fun reveal">
+                            <span class="emoji">🛰️</span>
+                            <h3>Judged AstroHacks</h3>
+                            <p>
+                                A high school hackathon. Judging turns out to be harder than competing: you have to explain why a clever idea
+                                isn't working yet to someone who stayed up all night building it.
+                            </p>
+                        </div>
+                        <div class="card fun reveal">
+                            <span class="emoji">📣</span>
+                            <h3>AIESEC, three portfolios deep</h3>
+                            <p>
+                                Outgoing exchange, incoming exchange and business development. Pitched 9+ sponsors, led digital marketing for
+                                Balakalakar and brought in a client worth ₹20k+.
+                            </p>
+                        </div>
+                        <div class="card fun reveal">
+                            <span class="emoji">🥽</span>
+                            <h3>An AR portal, for the joy of it</h3>
+                            <p>
+                                Built an Android AR portal app back when everyone was still arguing about whether AR was a fad. Walk through a
+                                doorway on your living room floor, end up somewhere else.
+                            </p>
+                        </div>
+                        <div class="card fun reveal">
+                            <span class="emoji">🥈</span>
+                            <h3>Second, All-India IT Fest</h3>
+                            <p>IPSC, 2014. I have been doing this a while.</p>
+                        </div>
+                        <div class="card fun reveal">
+                            <span class="emoji">🗣️</span>
+                            <h3>English, Hindi, Punjabi &amp; a little German</h3>
+                            <p>
+                                The German is officially "limited working proficiency" — realistically, enough to order breakfast with
+                                confidence and misunderstand the reply.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ CONTACT ============ -->
+            <section id="contact">
+                <div class="wrap">
+                    <div class="reveal">
+                        <p class="mono eyebrow">08 · the inbox</p>
+                        <h2>Write to <span class="grad-text">me.</span></h2>
+                        <p class="sec-sub">
+                            Distributed systems, agentic AI, or a design problem that has been bugging you for a month. I read all of it, and I answer.
+                        </p>
+
+                        <a class="mailto" href="mailto:nikhilv1@uci.edu">nikhilv1@uci.edu</a>
+
+                        <div class="contact-meta">
+                            <span><i class="fa-solid fa-phone" aria-hidden="true"></i> +1 949-678-2129</span>
+                            <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Santa Clara, California</span>
+                            <span><i class="fa-solid fa-clock" aria-hidden="true"></i> Pacific Time</span>
+                        </div>
+
+                        <div class="socials">
+                            <a href="https://www.linkedin.com/in/nikhilvermauci/" target="_blank" rel="noopener" aria-label="LinkedIn"
+                                ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+                            ></a>
+                            <a href="https://github.com/invalidexplorer/" target="_blank" rel="noopener" aria-label="GitHub"
+                                ><i class="fa-brands fa-github" aria-hidden="true"></i
+                            ></a>
+                            <a href="https://medium.com/@nikhilis1700" target="_blank" rel="noopener" aria-label="Medium"
+                                ><i class="fa-brands fa-medium" aria-hidden="true"></i
+                            ></a>
+                            <a href="https://dribbble.com/InvalidExplorer/" target="_blank" rel="noopener" aria-label="Dribbble"
+                                ><i class="fa-brands fa-dribbble" aria-hidden="true"></i
+                            ></a>
+                            <a href="assets/NikhilVerma-Resume.pdf" target="_blank" rel="noopener" aria-label="Résumé"
+                                ><i class="fa-regular fa-file-lines" aria-hidden="true"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="wrap">
+                <span>© <span id="year">2026</span> Nikhil Verma · he/him</span>
+                <span>One page of hand-written HTML and CSS. No framework, no build step.</span>
             </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Projects-->
-            <section class="resume-section" id="projects">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="subheading mb-3">XTC Coin<a class="social-icon" href="https://github.com/invalidexplorer/xtcCoin" target="_blank" ><i class="fa fa-arrow-up-right-from-square"></i></a></h3> 
-                            <p><ul id="portfolio-website-project" class="fa-ul mb-0">Created the backend of a blockchain cryptocurrency using ECC, Request’s library, Pubsub library,
-                                Flask, etc</ul></p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="subheading mb-3">Uber Compass UX/UI Case study<a class="social-icon" href="https://medium.muz.li/uber-compass-an-ar-ux-ui-case-study-569dd2e9f650" target="_blank"><i class="fa fa-arrow-up-right-from-square"></i></a></h3> 
-                            <p><ul id="finance-tracker-project" class="fa-ul mb-0">Created a case study for Uber, making pickup seamless using AR, which was published in an esteemed
-                                design medium journal.</ul></p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="subheading mb-3"> GPS Tracking Report Generator <a class="social-icon" href="https://github.com/invalidexplorer/buddy_gps_generator" target="_blank"><i class="fa fa-arrow-up-right-from-square"></i></a></h3> 
-                            <p><ul id="Gps-tracking-project" class="fa-ul mb-0">Created a GPS tracking report generator for a startup called Buddy Cabs that generates an extensive
-                                route report based on Coordinates using Google Maps API in JavaScript.</ul></p>
-                        </div>
-                    </div>
-                    <div class="subheading mb-3 mt-5">Publications</div>
-                    <p> <b>N. Verma, S. Kumari and P. Jain, "Post Quantum Digital Signature Change in IOTA to Reduce Latency
-                        in Internet of Vehicles (IoV) Environments</b></p>
-                    <p class="mb-0">2022 International Conference on IoT and Blockchain
-                        Technology (ICIBT), 2022 pp.1-6, doi: 10.1109/ICIBT52874.2022.9807757 .</p>
-                </div>
+        </footer>
 
+        <a class="to-top" id="toTop" href="#top" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
 
-            </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-            
-                    <!-- University of California, Irvine -->
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">University of California, Irvine</h3>
-                            <div class="d-md-none mb-3"><span class="text-primary">September 2023 - December 2024</span></div>
-                            <div class="subheading mb-0">Masters of Computer Science</div>
-                        </div>
-                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">September 2023 - December 2024</span></div>
-                    </div>
-            
-                    <!-- Thapar Institute of Engineering & Technology -->
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-3">Thapar Institute of Engineering & Technology</h3>
-                            <div class="d-md-none mb-3"><span class="text-primary">July 2017 - June 2021</span></div>
-                            <div class="subheading mb-0">Bachelor of Engineering (BE / B.Tech.)</div>
-                            <div class="subheading mb-0">Electronics & Computer</div>
-                            <p class="text-primary">CGPA: 9.03</p>
-                            <p>Courses: Data Structures and Algorithms, Operating Systems, Cognitive Science, etc</p>
-                        </div>
-                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">July 2017 - June 2021</span></div>
-                    </div>
-                </div>
-            </section>
-            
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Position of Responsibilities & Achievements</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-1">Special Mention, Trav-Tech Hackathon</h3>
-                            <div class="d-md-none mb-3"><span class="text-primary">AUGUST 2023</span></div>
-                            <p><ul id="Amadeus-responsilbities" class="experience-list">
-                                <li>Developed and handled by frontend on React for a travel search website aimed to inspire people. Multiple iterations were created on Figma before developing it in React. </li>
-                            </ul></p>
-                        </div>
-                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">AUGUST 2023</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-1">SeaThrough founder, 5Gyres</h3>
-                            <div class="d-md-none mb-3"><span class="text-primary">OCTOBER 2018 - AUGUST 2020</span></div>
-                            <p><ul id="5gyres-responsibilties" class="experience-list">
-                                <li>Headed and assembled a team of 8 people and managed 14 artists in 3 weeks to successfully organize
-                                    as well as execute a charity art exhibition to raise 30,000 Rs in 6 hours.</li>
-                                <li>Curated 30+ art works to meet the standard of the event</li>
-                                <li>Handled and supervised marketing, finances, quality check, artists recruitment, team performance, etc.</li>
-                            </ul></p>
-                        </div>
-                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">OCTOBER 2018 - AUGUST 2020</span></div>
-                    </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-1">Marketing Head, AIESEC's Balakalakar</h3>
-                        <div class="d-md-none mb-3"><span class="text-primary">APRIL 2019</span></div>
-                        <p><ul id="AIESEC-responsilbities" class="experience-list">
-                            <li>Boosted the reach of the event by scheduling, creating and managing the digital marketing content as
-                            well as headed a team of three people. Bringing in 6 volunteers.</li>
-                        </ul></p>
-                    </div>
-                    <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">APRIL 2019</span></div>
-                </div>
-            
-                </div>
-            </section>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/typed.js/typed.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
 </html>
